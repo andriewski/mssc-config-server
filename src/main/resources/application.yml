@@ -1,0 +1,23 @@
+server:
+    port: 8888
+
+spring:
+    application:
+        name: mssc-brewery-config
+    cloud:
+        config:
+            server:
+                git:
+#                    authentication is not needed because repo is public
+                    uri: https://github.com/andriewski/config-repo
+                    clone-on-start: true
+
+eureka:
+    client:
+        serviceUrl:
+            #            default value
+            defaultZone: http://localhost:8761/eureka
+
+logging.level:
+    org.springframework.cloud: debug
+    org.springframework.web: debug
