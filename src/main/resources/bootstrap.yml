@@ -1,0 +1,3 @@
+#Should be env property!!! This is just for simple example
+encrypt:
+    key: MySuperSecretKey
